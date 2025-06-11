@@ -67,6 +67,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            text-decoration: none;
         }
         .btn:hover {
             transform: translateY(-2px);
@@ -110,6 +111,122 @@
         }
         .feature-list {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            background: var(--primary-light);
+            padding: 16px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .version-badge {
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 14px;
+            display: inline-block;
+            margin-left: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">MXY</div>
+            <h1>Minimail Xyr Launcher</h1>
+            <p>下一代开源Minecraft启动体验</p>
+        </header>
+
+        <div class="card">
+            <h2>核心功能</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">启</div>
+                    <div>FCL启动</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">启</div>
+                    <div>基岩版启动</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">启</div>
+                    <div>网易版启动</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">下</div>
+                    <div>Mod/游戏下载</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">聊</div>
+                    <div>KOOK聊天室</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">模</div>
+                    <div>多种模式，离线，在线</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="text-align: center;">
+            <h2>下载 <span class="version-badge">v3.0 公测中</span></h2>
+            <button class="btn" onclick="openModal()">
+                <i>ℹ️</i> 了解更多
+            </button>
+            <a href="https://www.123912.com/s/67Xojv-sT1vd" class="btn" target="_blank">
+                <i></i> 下载软件
+            </a>
+        </div>
+    </div>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <h2>关于MXY启动器</h2>
+            <p style="margin-top: 20px; color: #666; font-size: 14px;">
+                 *按工作等级排名；为保护隐私些许成员使用网名
+            </p>
+            <div style="margin-top: 20px;">
+                <p><strong>开发团队:</strong> XYRMNC（造梦工作室）</p>
+                <p><strong>程序开发:</strong> MC_XYR, Deepseek, GitHub Copilot</p>
+                <p><strong>UI设计:</strong> MC_XYR, 崔紫睿, 王诗程,王丁蕊</p>
+                <p><strong>内容设计:</strong> MC_XYR, MC_DWY, 龍諆</p>
+                <p><strong>技术栈:</strong> C#, CSS | Visual Studio 2022</p>
+                <p><strong>系统要求:</strong> 安卓 (鸿蒙系统暂未适配)</p>
+                <p><strong>所需权限:</strong> 通知权限、文件管理权限</p>
+            </div>
+            <p style="margin-top: 20px; color: #666; font-size: 14px;">
+                * 正式版将于7月1日发布
+            </p>
+            <p style="margin-top: 20px; color: #666; font-size: 14px;">
+                 MXY启动器由XYRMNC（造梦工作室）原创开发 🚫禁止商用🚫
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('infoModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('infoModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>            display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 16px;
             margin-top: 20px;
